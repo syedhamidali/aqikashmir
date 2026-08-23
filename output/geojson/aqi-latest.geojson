@@ -1,0 +1,1131 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source": "https://open-meteo.com/en/docs/air-quality-api",
+    "model": "ECMWF CAMS global atmospheric composition",
+    "timestamp": "2026-08-23T05:38:59.613Z",
+    "count": 28
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7973,
+          34.0837
+        ]
+      },
+      "properties": {
+        "station_id": "srinagar",
+        "name": "Srinagar",
+        "district": "Srinagar",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 89,
+        "pm25": 23.3,
+        "pm10": 29.8,
+        "co": 416,
+        "co2": 453,
+        "no2": 3.6,
+        "o3": 133,
+        "so2": 4.5,
+        "dust": 12,
+        "uv": 6.35,
+        "temp": 24,
+        "hum": 62,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.1487,
+          33.7311
+        ]
+      },
+      "properties": {
+        "station_id": "anantnag",
+        "name": "Anantnag",
+        "district": "Anantnag",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 68,
+        "pm25": 11.6,
+        "pm10": 15.1,
+        "co": 353,
+        "co2": 449,
+        "no2": 2.9,
+        "o3": 120,
+        "so2": 2.1,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 22.6,
+        "hum": 76,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.3636,
+          34.198
+        ]
+      },
+      "properties": {
+        "station_id": "baramulla",
+        "name": "Baramulla",
+        "district": "Baramulla",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 79,
+        "pm25": 18.5,
+        "pm10": 29,
+        "co": 233,
+        "co2": 456,
+        "no2": 1.7,
+        "o3": 130,
+        "so2": 3.2,
+        "dust": 22,
+        "uv": 6.6,
+        "temp": 23.9,
+        "hum": 52,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7857,
+          33.9299
+        ]
+      },
+      "properties": {
+        "station_id": "budgam",
+        "name": "Budgam",
+        "district": "Budgam",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 89,
+        "pm25": 23.3,
+        "pm10": 29.8,
+        "co": 317,
+        "co2": 448,
+        "no2": 3.6,
+        "o3": 133,
+        "so2": 4.5,
+        "dust": 12,
+        "uv": 6.35,
+        "temp": 23.6,
+        "hum": 62,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6431,
+          34.4177
+        ]
+      },
+      "properties": {
+        "station_id": "bandipora",
+        "name": "Bandipora",
+        "district": "Bandipora",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 96,
+        "pm25": 22.8,
+        "pm10": 30.4,
+        "co": 216,
+        "co2": 442,
+        "no2": 2.5,
+        "o3": 134,
+        "so2": 3.1,
+        "dust": 17,
+        "uv": 7.25,
+        "temp": 23.5,
+        "hum": 65,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7748,
+          34.2265
+        ]
+      },
+      "properties": {
+        "station_id": "ganderbal",
+        "name": "Ganderbal",
+        "district": "Ganderbal",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 96,
+        "pm25": 22.8,
+        "pm10": 30.4,
+        "co": 401,
+        "co2": 453,
+        "no2": 2.5,
+        "o3": 134,
+        "so2": 3.1,
+        "dust": 17,
+        "uv": 7.25,
+        "temp": 22.8,
+        "hum": 76,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.0192,
+          33.6444
+        ]
+      },
+      "properties": {
+        "station_id": "kulgam",
+        "name": "Kulgam",
+        "district": "Kulgam",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 68,
+        "pm25": 11.6,
+        "pm10": 15.1,
+        "co": 294,
+        "co2": 443,
+        "no2": 2.9,
+        "o3": 120,
+        "so2": 2.1,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 21.6,
+        "hum": 82,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.2546,
+          34.5262
+        ]
+      },
+      "properties": {
+        "station_id": "kupwara",
+        "name": "Kupwara",
+        "district": "Kupwara",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 95,
+        "pm25": 20.5,
+        "pm10": 31.5,
+        "co": 226,
+        "co2": 476,
+        "no2": 2.4,
+        "o3": 127,
+        "so2": 2.9,
+        "dust": 25,
+        "uv": 7,
+        "temp": 24.6,
+        "hum": 44,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.8988,
+          33.8716
+        ]
+      },
+      "properties": {
+        "station_id": "pulwama",
+        "name": "Pulwama",
+        "district": "Pulwama",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 89,
+        "pm25": 23.3,
+        "pm10": 29.8,
+        "co": 323,
+        "co2": 443,
+        "no2": 3.6,
+        "o3": 133,
+        "so2": 4.5,
+        "dust": 12,
+        "uv": 6.35,
+        "temp": 21.8,
+        "hum": 70,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.8333,
+          33.7167
+        ]
+      },
+      "properties": {
+        "station_id": "shopian",
+        "name": "Shopian",
+        "district": "Shopian",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 56,
+        "pm25": 11.6,
+        "pm10": 16.9,
+        "co": 233,
+        "co2": 445,
+        "no2": 2.3,
+        "o3": 123,
+        "so2": 2.3,
+        "dust": 11,
+        "uv": 5.45,
+        "temp": 19.5,
+        "hum": 82,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.467,
+          34.287
+        ]
+      },
+      "properties": {
+        "station_id": "sopore",
+        "name": "Sopore",
+        "district": "Baramulla",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 95,
+        "pm25": 20.5,
+        "pm10": 31.5,
+        "co": 321,
+        "co2": 463,
+        "no2": 2.4,
+        "o3": 127,
+        "so2": 2.9,
+        "dust": 25,
+        "uv": 7,
+        "temp": 23.1,
+        "hum": 62,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.28,
+          34.4
+        ]
+      },
+      "properties": {
+        "station_id": "handwara",
+        "name": "Handwara",
+        "district": "Kupwara",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 95,
+        "pm25": 20.5,
+        "pm10": 31.5,
+        "co": 221,
+        "co2": 461,
+        "no2": 2.4,
+        "o3": 127,
+        "so2": 2.9,
+        "dust": 25,
+        "uv": 7,
+        "temp": 25.1,
+        "hum": 46,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.3805,
+          34.0484
+        ]
+      },
+      "properties": {
+        "station_id": "gulmarg",
+        "name": "Gulmarg",
+        "district": "Baramulla",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 79,
+        "pm25": 18.5,
+        "pm10": 29,
+        "co": 167,
+        "co2": 436,
+        "no2": 1.7,
+        "o3": 130,
+        "so2": 3.2,
+        "dust": 22,
+        "uv": 6.6,
+        "temp": 17.4,
+        "hum": 72,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.3151,
+          34.0159
+        ]
+      },
+      "properties": {
+        "station_id": "pahalgam",
+        "name": "Pahalgam",
+        "district": "Anantnag",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 74,
+        "pm25": 13,
+        "pm10": 16.9,
+        "co": 189,
+        "co2": 442,
+        "no2": 2.3,
+        "o3": 124,
+        "so2": 2,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 19.6,
+        "hum": 74,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.293,
+          34.305
+        ]
+      },
+      "properties": {
+        "station_id": "sonamarg",
+        "name": "Sonamarg",
+        "district": "Ganderbal",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 64,
+        "pm25": 7.9,
+        "pm10": 11.8,
+        "co": 151,
+        "co2": 441,
+        "no2": 0.5,
+        "o3": 136,
+        "so2": 1.5,
+        "dust": 10,
+        "uv": 8.15,
+        "temp": 20.1,
+        "hum": 64,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.66,
+          33.83
+        ]
+      },
+      "properties": {
+        "station_id": "yusmarg",
+        "name": "Yusmarg",
+        "district": "Budgam",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 89,
+        "pm25": 23.3,
+        "pm10": 29.8,
+        "co": 243,
+        "co2": 442,
+        "no2": 3.6,
+        "o3": 133,
+        "so2": 4.5,
+        "dust": 12,
+        "uv": 6.35,
+        "temp": 19.3,
+        "hum": 77,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.429,
+          34.045
+        ]
+      },
+      "properties": {
+        "station_id": "tangmarg",
+        "name": "Tangmarg",
+        "district": "Baramulla",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 79,
+        "pm25": 18.5,
+        "pm10": 29,
+        "co": 167,
+        "co2": 436,
+        "no2": 1.7,
+        "o3": 130,
+        "so2": 3.2,
+        "dust": 22,
+        "uv": 6.6,
+        "temp": 20.5,
+        "hum": 69,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.05,
+          34.079
+        ]
+      },
+      "properties": {
+        "station_id": "uri",
+        "name": "Uri",
+        "district": "Baramulla",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 88,
+        "pm25": 16.6,
+        "pm10": 30.7,
+        "co": 170,
+        "co2": 441,
+        "no2": 1.5,
+        "o3": 132,
+        "so2": 2.9,
+        "dust": 31,
+        "uv": 6.35,
+        "temp": 27.4,
+        "hum": 51,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.01,
+          33.92
+        ]
+      },
+      "properties": {
+        "station_id": "awantipora",
+        "name": "Awantipora",
+        "district": "Pulwama",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 74,
+        "pm25": 13,
+        "pm10": 16.9,
+        "co": 317,
+        "co2": 440,
+        "no2": 2.3,
+        "o3": 124,
+        "so2": 2,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 23.3,
+        "hum": 73,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.105,
+          33.793
+        ]
+      },
+      "properties": {
+        "station_id": "bijbehara",
+        "name": "Bijbehara",
+        "district": "Anantnag",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 68,
+        "pm25": 11.6,
+        "pm10": 15.1,
+        "co": 319,
+        "co2": 444,
+        "no2": 2.9,
+        "o3": 120,
+        "so2": 2.1,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 22.4,
+        "hum": 76,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.15,
+          33.64
+        ]
+      },
+      "properties": {
+        "station_id": "qazigund",
+        "name": "Qazigund",
+        "district": "Anantnag",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 68,
+        "pm25": 11.6,
+        "pm10": 15.1,
+        "co": 276,
+        "co2": 444,
+        "no2": 2.9,
+        "o3": 120,
+        "so2": 2.1,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 22.2,
+        "hum": 78,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.254,
+          33.55
+        ]
+      },
+      "properties": {
+        "station_id": "verinag",
+        "name": "Verinag",
+        "district": "Anantnag",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 68,
+        "pm25": 11.6,
+        "pm10": 15.1,
+        "co": 254,
+        "co2": 446,
+        "no2": 2.9,
+        "o3": 120,
+        "so2": 2.1,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 20.8,
+        "hum": 83,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.32,
+          33.59
+        ]
+      },
+      "properties": {
+        "station_id": "kokernag",
+        "name": "Kokernag",
+        "district": "Anantnag",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 68,
+        "pm25": 11.6,
+        "pm10": 15.1,
+        "co": 254,
+        "co2": 446,
+        "no2": 2.9,
+        "o3": 120,
+        "so2": 2.1,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 20.4,
+        "hum": 83,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.11,
+          33.935
+        ]
+      },
+      "properties": {
+        "station_id": "tral",
+        "name": "Tral",
+        "district": "Pulwama",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 74,
+        "pm25": 13,
+        "pm10": 16.9,
+        "co": 301,
+        "co2": 444,
+        "no2": 2.3,
+        "o3": 124,
+        "so2": 2,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 21.8,
+        "hum": 76,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.71,
+          33.995
+        ]
+      },
+      "properties": {
+        "station_id": "beerwah",
+        "name": "Beerwah",
+        "district": "Budgam",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 89,
+        "pm25": 23.3,
+        "pm10": 29.8,
+        "co": 319,
+        "co2": 448,
+        "no2": 3.6,
+        "o3": 133,
+        "so2": 4.5,
+        "dust": 12,
+        "uv": 6.35,
+        "temp": 22,
+        "hum": 69,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.197,
+          33.438
+        ]
+      },
+      "properties": {
+        "station_id": "banihal",
+        "name": "Banihal",
+        "district": "Ramban",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 68,
+        "pm25": 11.6,
+        "pm10": 15.1,
+        "co": 202,
+        "co2": 438,
+        "no2": 2.9,
+        "o3": 120,
+        "so2": 2.1,
+        "dust": 8,
+        "uv": 7.15,
+        "temp": 24.2,
+        "hum": 60,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.83,
+          34.63
+        ]
+      },
+      "properties": {
+        "station_id": "gurez",
+        "name": "Gurez (Dawar)",
+        "district": "Bandipora",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 60,
+        "pm25": 8.7,
+        "pm10": 16.9,
+        "co": 158,
+        "co2": 442,
+        "no2": 0.4,
+        "o3": 134,
+        "so2": 1.1,
+        "dust": 23,
+        "uv": 7.8,
+        "temp": 20.9,
+        "hum": 61,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.08,
+          34.69
+        ]
+      },
+      "properties": {
+        "station_id": "tangdhar",
+        "name": "Tangdhar",
+        "district": "Kupwara",
+        "online": true,
+        "time": "2026-08-23T05:00:00Z",
+        "aqi": 62,
+        "pm25": 10.2,
+        "pm10": 24.3,
+        "co": 151,
+        "co2": 441,
+        "no2": 0.6,
+        "o3": 131,
+        "so2": 2.2,
+        "dust": 35,
+        "uv": 7.3,
+        "temp": 16.5,
+        "hum": 46,
+        "aqi_unit": "USAQI",
+        "pm25_unit": "μg/m³",
+        "pm10_unit": "μg/m³",
+        "co_unit": "μg/m³",
+        "co2_unit": "ppm",
+        "no2_unit": "μg/m³",
+        "o3_unit": "μg/m³",
+        "so2_unit": "μg/m³",
+        "dust_unit": "μg/m³",
+        "temp_unit": "°C",
+        "hum_unit": "%"
+      }
+    }
+  ]
+}

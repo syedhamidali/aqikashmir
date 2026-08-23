@@ -1,0 +1,14 @@
+{
+  "name": "aqikashmir",
+  "version": "1.0.0",
+  "description": "Logs hourly air quality for the Kashmir Valley from the Open-Meteo / CAMS air quality API and archives it as GeoJSON + CSV",
+  "main": "src/fetch-aqi.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/fetch-aqi.js",
+    "test": "node src/test-connectivity.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
