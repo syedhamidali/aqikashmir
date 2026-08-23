@@ -2,7 +2,7 @@
 
 Hourly air quality archive and live dashboard for the **Kashmir Valley** — 28 towns from Uri to Pahalgam, Gurez to Banihal.
 
-**Live Dashboard**: [syedhamidali.github.io/aqikashmir](https://syedhamidali.github.io/aqikashmir/) — MapLibre map of current AQI per station, click a point for readings + history. On open, the dashboard fetches live readings directly from the Open-Meteo API (badge shows "Live"); if that's unreachable it falls back to the last hourly-logged snapshot (badge shows "Offline"). Each station panel has a "Download CSV" button for that station's time series.
+**Live Dashboard**: [syedhamidali.github.io/aqikashmir](https://syedhamidali.github.io/aqikashmir/) — MapLibre map of current AQI per station, click a point for readings + history. A toggleable shaded AQI surface interpolates between stations and draws filled contour bands across the valley. On open, the dashboard fetches live readings directly from the Open-Meteo API (badge shows "Live"); if that's unreachable it falls back to the last hourly-logged snapshot (badge shows "Offline"). Each station panel has a "Download CSV" button for that station's time series.
 
 > **Where the numbers come from.** There is no public network of live ground sensors covering Kashmir, so this project does **not** scrape physical monitors. Readings are sampled from the **ECMWF CAMS global atmospheric composition model** via the [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) at each town's coordinates. That is a ~40 km modelled estimate, not a calibrated instrument reading — good for regional trends and day-to-day comparison, not a substitute for a CPCB reference station. See [Why there are no ground sensors here](#why-there-are-no-ground-sensors-here).
 
@@ -70,6 +70,10 @@ Until then, the CAMS model is genuinely the best available data for the region �
 **`output/csv/aqi-YYYYMMDD.csv`** (bucketed by IST calendar day) — columns: `time, station_id, name, latitude, longitude, aqi, pm25, pm10, co, co2, no2, o3, so2, dust, uv, temp, hum`. One row per station per hour.
 
 `aqi` is the **US EPA AQI**, matching the colour breakpoints in the dashboard legend (0/51/101/151/201/301).
+
+### The shaded AQI surface
+
+The optional shaded layer inverse-distance-weights (power 2) the 28 station values onto a raster and colours it with the same EPA breakpoints as the legend, with isolines at an interval chosen to suit the current spread. It is an **interpolation, not a measurement**: between stations it is a smooth guess that ignores terrain, and Kashmir's air quality is strongly shaped by terrain. It deliberately fades out more than ~70 km from any station rather than filling its bounding box, so it never implies coverage it doesn't have.
 
 ## Credits
 
