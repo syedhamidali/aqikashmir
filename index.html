@@ -43,6 +43,148 @@
       inset: 0;
     }
 
+    /* Collapsible overlay cards. Both the title and the legend sit on top of
+       the map, and with the shaded AQI surface switched on they cover the
+       thing the user is trying to look at - so each one collapses to just its
+       header. Collapsed by default on narrow screens, where they otherwise
+       take most of the map. */
+    .drawer {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    /* The header is the always-visible handle and never wraps, so the card's
+       collapsed width stays predictable. */
+    .drawer-header {
+      flex: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .drawer-header > :first-child {
+      flex: none;
+      white-space: nowrap;
+      max-width: 420px;
+      overflow: hidden;
+      transition: max-width 0.22s ease, opacity 0.15s ease;
+    }
+
+    /* Collapsed, the card is meant to be just the arrow - leaving the caption
+       in place made it a block that still covered the map, which is the thing
+       collapsing is for. */
+    .drawer.collapsed .drawer-header > :first-child {
+      max-width: 0;
+      opacity: 0;
+    }
+
+    .drawer.collapsed .drawer-header {
+      gap: 0;
+    }
+
+    .drawer-toggle {
+      flex: none;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 11px;
+      line-height: 1;
+      padding: 3px 4px;
+      border-radius: 4px;
+      transition: transform 0.2s ease, background 0.15s ease;
+      transform: rotate(90deg);
+    }
+
+    .drawer-toggle:hover {
+      background: var(--gridline);
+      color: var(--text-primary);
+    }
+
+    .drawer.collapsed .drawer-toggle {
+      transform: rotate(-90deg);
+    }
+
+    /* Opens sideways: max-width animates instead of max-height, so the body
+       unfolds to the right of the header rather than pushing the card up or
+       down. .drawer-inner holds a fixed width so the content keeps its layout
+       while the body is clipped, instead of reflowing on every frame. */
+    .drawer-body {
+      flex: none;
+      max-width: min(300px, calc(100vw - 160px));
+      max-height: 70vh;
+      overflow: hidden;
+      opacity: 1;
+      margin-left: 12px;
+      transition: max-width 0.25s ease, opacity 0.18s ease, margin-left 0.25s ease;
+    }
+
+    /* Clipping the width alone still leaves the body's full content height
+       behind, which would keep a collapsed card as tall as its open one - so
+       the height is zeroed too. It is not transitioned, so the visible motion
+       stays the sideways one. */
+    .drawer.collapsed .drawer-body {
+      max-width: 0;
+      max-height: 0;
+      opacity: 0;
+      margin-left: 0;
+    }
+
+    .drawer-inner {
+      width: 300px;
+    }
+
+    #title.collapsed,
+    #legend.collapsed {
+      padding: 5px 6px;
+    }
+
+    /* Stacked variant - the body unfolds below the header instead of beside
+       it, for cards whose content reads as a column (readings, then the
+       locate button, then the links). Everything else about the drawer, the
+       arrow and the collapse-to-just-an-arrow behaviour, is unchanged. */
+    .drawer-stacked {
+      display: block;
+    }
+
+    .drawer-stacked .drawer-body {
+      max-width: none;
+      max-height: 70vh;
+      margin-left: 0;
+      margin-top: 8px;
+      transition: max-height 0.25s ease, opacity 0.18s ease, margin-top 0.25s ease;
+    }
+
+    /* Width is clamped as well as height: at zero height the body still held
+       its 300px width open, which kept the collapsed card a wide bar instead
+       of shrinking to the arrow. */
+    .drawer-stacked.collapsed .drawer-body {
+      max-width: 0;
+      max-height: 0;
+      margin-top: 0;
+    }
+
+    .drawer-stacked .drawer-toggle {
+      transform: rotate(0deg);
+    }
+
+    .drawer-stacked.collapsed .drawer-toggle {
+      transform: rotate(-90deg);
+    }
+
+    /* The header still has to span the card so the arrow stays at its right
+       edge, rather than hugging the title text. */
+    .drawer-stacked .drawer-header {
+      display: flex;
+      width: 100%;
+    }
+
+    .drawer-stacked .drawer-header > :first-child {
+      flex: 1;
+    }
+
     #title {
       position: absolute;
       top: 16px;
@@ -53,7 +195,6 @@
       border-radius: var(--radius);
       padding: 12px 16px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-      max-width: 260px;
     }
 
     #title h1 {
@@ -573,26 +714,40 @@
 <body>
   <div id="map"></div>
 
-  <div id="title">
-    <h1>Kashmir AQI Monitor <span id="feed-status" class="feed-badge pending"><span class="dot"></span>Connecting</span>
-    </h1>
-    <p id="last-updated">Loading latest readings&hellip;</p>
-    <button id="locate-btn" class="btn-locate" onclick="locateClosestStation()">Locate closest station</button>
-    <div class="links">
-      Source: <a href="https://open-meteo.com/en/docs/air-quality-api" target="_blank" rel="noopener">Open-Meteo &middot; CAMS</a>
-      &nbsp;&middot;&nbsp;
-      <a href="https://github.com/syedhamidali/aqikashmir" target="_blank" rel="noopener">GitHub ↗</a>
+  <div id="title" class="drawer drawer-stacked">
+    <div class="drawer-header" onclick="toggleDrawer('title')">
+      <h1>Kashmir AQI Monitor <span id="feed-status" class="feed-badge pending"><span class="dot"></span>Connecting</span>
+      </h1>
+      <button type="button" class="drawer-toggle" id="title-toggle" aria-expanded="true" aria-controls="title-body"
+        aria-label="Collapse panel" onclick="event.stopPropagation();toggleDrawer('title')">&#9662;</button>
+    </div>
+    <div class="drawer-body" id="title-body">
+      <div class="drawer-inner">
+      <p id="last-updated">Loading latest readings&hellip;</p>
+      <button id="locate-btn" class="btn-locate" onclick="locateClosestStation()">Locate closest station</button>
+      <div class="links">
+        Source: <a href="https://open-meteo.com/en/docs/air-quality-api" target="_blank" rel="noopener">Open-Meteo &middot; CAMS</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://github.com/syedhamidali/aqikashmir" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      </div>
     </div>
   </div>
 
-  <div id="legend">
+  <div id="legend" class="drawer">
+    <div class="drawer-header" onclick="toggleDrawer('legend')">
+      <div class="caption">Air Quality Index</div>
+      <button type="button" class="drawer-toggle" id="legend-toggle" aria-expanded="true" aria-controls="legend-body"
+        aria-label="Collapse legend" onclick="event.stopPropagation();toggleDrawer('legend')">&#9662;</button>
+    </div>
+    <div class="drawer-body" id="legend-body">
+      <div class="drawer-inner">
     <div class="row" id="legend-inspect-row"
       style="display:none;align-items:center;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--gridline);">
       <span id="legend-inspect-bubble"></span>
       <span><strong id="legend-inspect-metric"></strong> in recent range<br><strong
           id="legend-inspect-time"></strong></span>
     </div>
-    <div class="caption">Air Quality Index</div>
     <div class="row"><span class="swatch" style="background:#00e400"></span>0&ndash;50 Good</div>
     <div class="row"><span class="swatch" style="background:#ffd400"></span>51&ndash;100 Moderate</div>
     <div class="row"><span class="swatch" style="background:#ff7e00"></span>101&ndash;150 Sensitive groups</div>
@@ -606,9 +761,11 @@
           style="background:linear-gradient(90deg,#00e400,#ffd400,#ff7e00,#ff0000);opacity:0.6"></span><span id="surface-label">Shaded AQI surface</span>
       </label>
     </div>
-    <div class="caption" style="margin-top:8px;border-top:1px solid var(--gridline);padding-top:6px;">
-      Modelled hourly from ECMWF CAMS &mdash; not a ground sensor reading.
+    <div class="caption" style="margin-top:8px;border-top:1px solid var(--gridline);padding-top:6px;font-size:11px;">
+      Modelled hourly from ECMWF CAMS &mdash; not a ground sensor reading.<br>
       The shaded surface is interpolated between stations and fades out where none is near.
+    </div>
+      </div>
     </div>
   </div>
 
@@ -1105,9 +1262,16 @@
 
           if (step) {
             const band = Math.floor(value / step);
-            const rightDiffers = x + 1 < SURFACE_GRID && Math.floor(values[index + 1] / step) !== band;
-            const belowDiffers = y + 1 < SURFACE_GRID && Math.floor(values[index + SURFACE_GRID] / step) !== band;
-            if (rightDiffers || belowDiffers) {
+            // All four neighbours, not just east/south: that makes the line two
+            // pixels wide, which survives the layer's linear filtering. A 1px
+            // line gets blurred away once the raster is magnified on screen.
+            const differs = (offset) => Math.floor(values[index + offset] / step) !== band;
+            const onEdge =
+              (x + 1 < SURFACE_GRID && differs(1)) ||
+              (x > 0 && differs(-1)) ||
+              (y + 1 < SURFACE_GRID && differs(SURFACE_GRID)) ||
+              (y > 0 && differs(-SURFACE_GRID));
+            if (onEdge) {
               // Darken rather than draw a fixed colour, so the line stays
               // visible against every band from pale green to deep maroon.
               r = Math.round(r * 0.55); g = Math.round(g * 0.55); b = Math.round(b * 0.55);
@@ -1161,8 +1325,13 @@
         source: 'aqi-surface',
         layout: { visibility: surfaceVisible ? 'visible' : 'none' },
         paint: {
-          'raster-opacity': 0.5,
-          'raster-resampling': 'nearest', // keep the AQI bands as hard edges, not a gradient
+          'raster-opacity': 0.55,
+          // NOTE: do not set 'raster-resampling': 'nearest' here. On an image
+          // source in MapLibre GL JS 4.7.1 that renders the whole raster as
+          // pure black (verified: 'nearest' at layer-creation time reads back
+          // rgb(0,0,0) where 'linear'/unset read back the correct colour), and
+          // because the texture's filter is baked when it is first created,
+          // switching the property at runtime does not repair it.
           'raster-fade-duration': 0
         }
       }, 'aqi-points-hit');
@@ -1174,6 +1343,56 @@
         map.setLayoutProperty('aqi-surface-layer', 'visibility', visible ? 'visible' : 'none');
       }
     }
+
+    // ---- Collapsible overlay drawers ----------------------------------
+    // The collapsed/expanded choice is remembered per viewer, but only once
+    // they actually make one: with nothing stored, narrow screens start
+    // collapsed and roomy ones start open.
+    const DRAWER_IDS = ['title', 'legend'];
+
+    function setDrawer(id, collapsed) {
+      const drawer = document.getElementById(id);
+      const toggle = document.getElementById(`${id}-toggle`);
+      if (!drawer) return;
+      drawer.classList.toggle('collapsed', collapsed);
+      if (toggle) {
+        const label = id === 'legend' ? 'legend' : 'panel';
+        toggle.setAttribute('aria-expanded', String(!collapsed));
+        toggle.setAttribute('aria-label', `${collapsed ? 'Expand' : 'Collapse'} ${label}`);
+        // Collapsed, the arrow is the only thing left on screen, so it has to
+        // say what it opens on hover.
+        toggle.setAttribute('title', `${collapsed ? 'Show' : 'Hide'} ${label}`);
+      }
+    }
+
+    function toggleDrawer(id) {
+      const drawer = document.getElementById(id);
+      if (!drawer) return;
+      const collapsed = !drawer.classList.contains('collapsed');
+      setDrawer(id, collapsed);
+      // Storage can throw outright in private/blocked contexts, so a failed
+      // write must not take the toggle down with it.
+      try {
+        localStorage.setItem(`drawer:${id}`, collapsed ? 'collapsed' : 'open');
+      } catch (err) {
+        /* preference just isn't remembered */
+      }
+    }
+
+    function initDrawers() {
+      const narrow = window.matchMedia('(max-width: 640px)').matches;
+      for (const id of DRAWER_IDS) {
+        let stored = null;
+        try {
+          stored = localStorage.getItem(`drawer:${id}`);
+        } catch (err) {
+          /* fall through to the width-based default */
+        }
+        setDrawer(id, stored === null ? narrow : stored === 'collapsed');
+      }
+    }
+
+    initDrawers();
 
     function setFeedStatus(state, asOf) {
       const el = document.getElementById('feed-status');
