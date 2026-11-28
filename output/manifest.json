@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T17:57:56.084Z",
+  "updatedAt": "2026-11-28T01:20:59.880Z",
   "source": "https://open-meteo.com/en/docs/air-quality-api",
   "model": "ECMWF CAMS global atmospheric composition",
   "fields": [
@@ -795,6 +795,7 @@
     "aqi-20261124.csv",
     "aqi-20261125.csv",
     "aqi-20261126.csv",
-    "aqi-20261127.csv"
+    "aqi-20261127.csv",
+    "aqi-20261128.csv"
   ]
 }
